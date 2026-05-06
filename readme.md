@@ -4,6 +4,8 @@
 I've create a site to document my workflow for using AI in qualitative analysis.
 https://zoracreates.github.io/uxrai/
 
+## Copy right
+Please reference/credit this work as per `LICENSE`.
 
 ## Dev notes...
 
