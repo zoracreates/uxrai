@@ -91,9 +91,10 @@ module.exports = function (eleventyConfig) {
 
     //collections
 
-    // Returns a collection of blog posts in reverse date order
-    eleventyConfig.addCollection('blog', collection => {
-        return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
+
+        // Returns a collection of analysis posts in reverse date order
+    eleventyConfig.addCollection('analysis', collection => {
+        return [...collection.getFilteredByGlob('./src/analysis/*.md')].reverse();
     });
 
     return {
@@ -108,5 +109,8 @@ module.exports = function (eleventyConfig) {
         },
     };
 };
+
+
+
 
 

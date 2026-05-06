@@ -1,0 +1,21 @@
+<header>
+
+    <div class="nav-wrapper">
+        {% include "../landmarks/nav.html" %}
+    </div>
+
+    <div class="wrapper-sm block-center">
+
+    {% include "./analysis-breadcrumbs.html" %}
+
+        <h1>{{ title }}</h1>
+
+        <p class="u-small">
+            <span class="label">Last Updated:</span>
+            <time datetime="{{ date }}">
+                {{ date | formatDate }}</time>
+        </p>
+
+        </div>
+
+</header>

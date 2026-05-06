@@ -1,20 +1,64 @@
 {% extends "layouts/base.html" %}
 {% set title = "Home" %}
-{% set pageId = "home" %}
+{% set pageId = "analysis" %}
 
 {% block content %}
 
   <header>
     {% include "components/landmarks/nav.html" %}
-    <div class="hero-band">
-      {% include "components/home/banner.html" %}
+    <div class="wrapper-md">
+      <h1>AI for Qualitative Analysis</h1>
     </div>
   </header>
 
   <main>
-    <section class="wrapper-lg cols-3fr-1fr">
-      {% include "components/home/stages-of-research.html" %}
-      </section>
+    <div class="wrapper-md">
+      <p>
+        The goal of this page is to inspire you to use AI in your analysis process in ways that consider your strengths as a researcher. This framework will hopefully also challenge the notion that AI cannot form part of a rigorous research approach.
+      </p>
+
+      <p>
+        This isn’t a step-by-step or a how-to in the traditional sense. This is what has worked for me, and also what I’m experimenting with.
+      </p>
+
+      <div class="col">
+        <div class="cols-1fr-1fr">
+
+          <div class="col">
+
+            <h2>Researcher's strenghts</h2>
+            - Prioritizing based on relevance. - Understanding user needs and emotions. - Understanding business impact. - Awareness of biases at a human level. - Focused coding of data.
+
+          </div>
+
+          <div class="col">
+
+            <h2>How AI can assist</h2>
+             - Create awareness of confirmation bias. - Speed up data-familiarization for secondary analysis. - Identify potential gaps the evidene used. - Help anticipate stakeholder questions. - Provide alternatives for looking at data.
+
+          </div>
+
+        </div>
+      </div>
+
+      <h2> Explore the Process</h2>
+      <p class="note">
+        <span class="label note">Note:</span>
+        “Phases” help me categorize the information. Every researcher has their own process, and UXR isn’t linear. Take what works for you and leave the rest.
+      </p>
+
+      <ul class="post-list cols-1fr-1fr ">
+        <li class="card col">
+          <a href="/analysis/data-familiarization">
+            Phase 1: Data Familiarization
+          </a>
+        </li>
+        <li class="card col">Phase 2: Coding and pattern generation</li>
+        <li class="card col">Phase 3. Interpretation and Themes Generation</li>
+        <li class="card col">Phase 4. Insight Generation and Review</li>
+      </ul>
+
+    </div>
   </main>
 
 {% endblock %}

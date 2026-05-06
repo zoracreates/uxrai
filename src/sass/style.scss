@@ -428,6 +428,15 @@ nav.wrapper-lg {
     margin-left: auto;
     margin-right: auto;
   }
+
+  li > p,
+  li p {
+    margin-left: 0px;
+  }
+
+  h2 {
+    margin-top: 0px;
+  }
 }
 
 nav[aria-label="breadcrumbs"] {

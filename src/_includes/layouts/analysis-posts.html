@@ -1,0 +1,31 @@
+{% extends "layouts/base.html"%}
+{% set pageId = "post" %}
+{% set postCollection = collections.analysis | reverse %}
+{% set previousPost = postCollection | getPreviousCollectionItem(page) %}
+{% set nextPost = postCollection | getNextCollectionItem(page) %}
+
+{% block content %}
+
+    {% include "components/posts/analysis-header.html" %}
+
+    <main>
+        <article>
+
+            {{ content | safe }}
+        </article>
+    </main>
+
+    {% include "components/posts/previous-next.html" %}
+
+    <script>
+
+        const preventRightClick = (element) => {
+            element.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+            });
+        }
+        const articleImages = document.querySelectorAll("article img");
+        articleImages.forEach(image => preventRightClick(image))
+    </script>
+
+    {% endblock%}
