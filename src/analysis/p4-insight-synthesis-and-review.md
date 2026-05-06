@@ -19,11 +19,11 @@ description: Articulate findings or insights and determine if they require addit
 
 ## Examples of tools:
 ### Word** or PowerPoint
-	- Start out low-tech. Creating a simple table with a summary of your insights.
+Start out low-tech. Creating a simple table with a summary of your insights.
 ### Copilot or Dovetail chat:
-	- You can use either one or both to critique your insights.
-    - **Dovetail** allows you to skip the context part. If you are opting to use Dovetail for this, the data and documents in your Dovetail project or folder will serve as evidence.
-    - **Copilot**  is ideal when you want AI to look closely at a set of vetted data. You can upload the documents you consider important evidence, specifically, and ask it to use this data to evaluate your insights.
+You can use either one or both to critique your insights.
+- **Dovetail** allows you to skip the context part. If you are opting to use Dovetail for this, the data and documents in your Dovetail project or folder will serve as evidence.
+- **Copilot**  is ideal when you want AI to look closely at a set of vetted data. You can upload the documents you consider important evidence, specifically, and ask it to use this data to evaluate your insights.
 
 ## Suggested prompts:
 
