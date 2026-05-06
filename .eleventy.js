@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
         date = new Date(date)
         let monthNumber = date.getMonth();
         let month = months[monthNumber];
-        let day = date.getDate();
+        let day = date.getDate() + 1;
         let year = date.getFullYear();
         let formatedDate = `${month} ${day}, ${year}`
 

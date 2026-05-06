@@ -1,7 +1,7 @@
 ---
-title: 'Blog Tag: '
+title: 'Tag: '
 layout: 'layouts/blog-index.html'
-description: Writings about a UX, a career in tech, and inclusive research and design.
+description: Thoughts about how to use AI in UX Research
 pagination:
   data: collections
   size: 1

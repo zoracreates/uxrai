@@ -57,6 +57,7 @@ img {
 .wrapper-md {
   width: 92%;
   max-width: 900px;
+    margin: 0 auto 0px auto;
 }
 
 .wrapper-sm {
@@ -97,7 +98,7 @@ header nav a {
 }
 
 main {
-  padding-top: 70px;
+  padding-bottom: 70px;
   background-color: $primary-color;
 }
 
@@ -236,7 +237,6 @@ ul.social span,
   @include bold-font;
 }
 
-.label,
 .u-small {
   font-size: $h6-size;
 }
@@ -246,6 +246,10 @@ p.u-small {
   &:last-child {
     padding-bottom: 1.45rem;
   }
+}
+
+.note {
+  font-style: italic;
 }
 /* cards and blocks appearence */
 .card-title {
@@ -416,7 +420,9 @@ nav.wrapper-lg {
   h6,
   p,
   ul,
-  ol {
+  ol,
+  div,
+  pre {
     max-width: 720px;
     width: 92%;
     margin-left: auto;
@@ -621,6 +627,10 @@ a.tag {
 }
 
 /* home */
+#home main {
+  padding-top: 70px;
+}
+
 .video-container,
 .audio-container {
   position: relative;
