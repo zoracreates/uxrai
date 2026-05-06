@@ -2,7 +2,7 @@
 title: Phase 4 - Insight Synthesis and Review
 tags: [ "Analysis"]
 date: 2026-05-05
-description: Articulate your findings or insights and determine if they require additional clarification. Use AI to identify gaps in thinking.
+description: Articulate findings or insights and determine if they require additional clarification. Use AI to identify gaps in thinking.
 ---
 
 ## Overview
