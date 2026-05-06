@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="" />
+
+
+    
+    <link rel="stylesheet" href="../../css/style.css"/>
+    
+
+</head>
+
+    
+        <body id="post">
+    
+
+        
+
+    <header>
+
+    <div class="nav-wrapper">
+        
+    <nav class="wrapper-lg">
+        <div>
+        <a class="logo" href="../../index.html">UXR AI Playbook</a>
+        </div>
+    </nav>
+
+    </div>
+
+    <div class="wrapper-sm block-center">
+
+    <div class="breadcrumb-wrapper">
+
+    <nav aria-label="breadcrumbs">
+        <ol class="nav-list">
+            <li>
+                <a href="../../index.html">
+                    Home
+                </a>
+            </li>
+        </ol>
+    </nav>
+</div>
+
+        <h1>Phase 1 - Data Familiarization</h1>
+
+        <p class="u-small">
+            <span class="label">Last Updated:</span>
+            <time datetime="Mon May 04 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
+                May 5, 2026</time>
+        </p>
+
+        </div>
+
+</header>
+
+    <main>
+        <article>
+
+            <h2>Overview</h2>
+<ul>
+<li><strong>Objective:</strong> Familiarize yourself with the data and ground the AI tool on your research documents.</li>
+<li><strong>AI usage:</strong> Use AI to summarize existing research and assess what is represented and what is not in the data.</li>
+</ul>
+<h2>Suggested Workflow:</h2>
+<ol>
+<li>Inventory data by using AI to:</li>
+<li>Transcribe interviews.
+2. Summarize each interview session.
+3. Summarize desk research.</li>
+<li>Revise transcripts and summaries</li>
+<li>Use AI to generate a list of data limitations.</li>
+<li>Revise the list of limitations.</li>
+</ol>
+<h2>Examples of tools:</h2>
+<h3>Dovetail</h3>
+<ul>
+<li>Transcribe interview sessions</li>
+<li>Provides automatic summaries</li>
+<li>You can also use its chat feature to request a summary of data in a given structure.</li>
+</ul>
+<h3>Copilot</h3>
+<ul>
+<li>Copilot is best for summarizing decks, PDFs, and Word documents from your desk research.</li>
+<li>If preferred, you can use Copilot to summarize transcripts, but include constraints in your prompts to ensure rigor.</li>
+</ul>
+<h2>Suggested prompts</h2>
+<h3 id="summarization"> Summarization</h4>
+<p>Provide AI with transcripts and/or desk research artifacts, and consider using a version of this prompt. Have it look at the artifacts individually first.</p>
+<p>You may need slight edits depending on the tool you use. For example, the best way to generate a custom summary in Dovetail is to summarize sessions one by one: simply open the chat feature for the data you’d like to summarize.</p>
+<pre><code>Read only the documents I've provided.
+
+Do NOT summarize across documents.  
+Do NOT infer insights or implications.  
+DO NOT use external knowledge.
+
+For each individual document, create a summary that contains:  
+
+- Background: Provide a few bullet points describing this participant, including {relevant properties}  
+	
+- If available, answers to each of these questions:  
+	- {project-specific information}
+	
+- For each claim in the summary, extract verbatim quotes (exact wording) as evidence  
+
+
+Rules:  
+If there is not enough evidence to answer the question, explicitly write: &quot;Not enough evidence to answer this question.&quot;  
+When providing quotes, only use direct quotes (no paraphrasing).  
+If no exact quote exists as evidence for a claim, explicitly write: &quot;No direct quote.&quot;  
+Provide a time-stamp for each quote.  
+Keep quotes document-specific and clearly labeled (e.g., &quot;P1&quot;, &quot;P2&quot;). 
+Do not edit, shorten, or clean up the quotes in any way.
+</code></pre>
+<h3 id="boundry-check">Boundary check</h3>
+<p>Once you’ve revised AI’s outputs, ask AI to describe what’s represented across. I recommend doing this in a separate chat so the LLM does not get confused by context.</p>
+<pre><code>Consider this document your evidence set.
+  
+Confirm the boundaries of the evidence set.
+
+List:
+
+- What is represented in this document?
+
+- Describe the user group(s) represented?
+
+- What, if any, user groups may be missing?
+
+- What questions can this data answer?
+
+- What is explicitly NOT  represented?
+
+- How well are each of these research questions answered?
+	- {questions}
+</code></pre>
+
+        </article>
+    </main>
+
+    
+    <nav aria-label="Previos and Next Posts">
+        <div class="wrapper-lg post-nav">
+            
+            
+                <div class="block-right post-nav-title">
+                    <a href="/analysis/p2-coding-and-pattern-discovery/">
+                        <span class="post-nav-label">Next</span>
+                        <span class="post-nav-title">
+                            Phase 2 - Coding and Pattern Disovery
+                            <span class="forward-arrow">&#8594;</span>
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    </nav>
+
+
+    <script>
+
+        const preventRightClick = (element) => {
+            element.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+            });
+        }
+        const articleImages = document.querySelectorAll("article img");
+        articleImages.forEach(image => preventRightClick(image))
+    </script>
+
+    
+
+        <footer>
+    <div class="wrapper-lg">
+        <p class="u-small">© Zoraida Cabrera-Mieles 2026</p>
+    </div>
+</footer>
+
+    </body>
+
+</html>
