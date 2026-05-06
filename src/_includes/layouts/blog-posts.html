@@ -1,0 +1,31 @@
+{% extends "layouts/base.html"%}
+{% set pageId = "post" %}
+{% set blogCollection = collections.blog | reverse %}
+{% set previousPost = blogCollection | getPreviousCollectionItem(page) %}
+{% set nextPost = blogCollection | getNextCollectionItem(page) %}
+
+{% block content %}
+
+    {% include "components/posts/post-header.html" %}
+
+    <main>
+        <article>
+
+            {{ content | safe }}
+        </article>
+    </main>
+
+    {% include "components/posts/previous-next.html" %}
+
+    <script>
+
+        const preventRightClick = (element) => {
+            element.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+            });
+        }
+        const articleImages = document.querySelectorAll("article img");
+        articleImages.forEach(image => preventRightClick(image))
+    </script>
+
+    {% endblock%}

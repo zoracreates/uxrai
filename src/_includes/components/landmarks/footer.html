@@ -1,0 +1,25 @@
+<footer>
+    <div class="wrapper-lg">
+        <p>
+            <a href="/feed.xml">RSS</a>
+        </p>
+
+        <ul class="social">
+            {% for channel in socialChannels.channels %}
+                <li>
+                    <a href="{{ channel.url }}">
+                        <img src="{{ channel.iconSrc }}" alt="{{ channel.name }} icon"/>
+                        <span>Zoraida's
+                            {{ channel.name }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <p class="u-small">© Zoraida Cabrera-Mieles 2023</p>
+         <p class="u-small"> 
+         Unless otherwise specified, all writtten content and photographs (including those without a copyright notice) are copyrighted and may not be used without permission.
+         </p>
+         <p class="u-small">The Homepage has my images and the ocassional free to use stock image. For images that are not mine: <a href="/credits/">see credits.</a>
+    </div>
+</footer>

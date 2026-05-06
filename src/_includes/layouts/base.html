@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    {% include "meta/head.html" %}
+
+    {% if pageId %}
+        <body id="{{ pageId }}">
+    {% else %}
+        <body>
+    {% endif %}
+
+        {% block content %}{% endblock %}
+
+        {% include "components/landmarks/footer.html" %}
+
+    </body>
+
+</html>

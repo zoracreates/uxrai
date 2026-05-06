@@ -1,0 +1,16 @@
+{% extends "layouts/secondary-base.html" %}
+{% set pageId = "about" %}
+
+{% block mainContent %}
+    <main>
+        <div class="wrapper-lg cols-1fr-2fr">
+            <div class="col">
+                {% image "./src/images/about/me.jpg", "Zoraida, a woman with black curly hair and large glasses black glasses, smiling widely" %}
+            </div>
+            <div class="col">
+                  {{ content | safe }}
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

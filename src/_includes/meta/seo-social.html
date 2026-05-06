@@ -1,0 +1,33 @@
+{% if title %}
+  {% set pageTitle = title %}
+{% else %}
+  {%set pageTitle = metadata.title %}
+{% endif %}
+
+{% if description %}
+  {% set pageDescription = description %}
+{% else %}
+  {% set pageDescription = metadata.description %}
+{% endif %}
+
+{% if tags %}
+  {% set pageKeywords = tags %}
+{% else %}
+  {% set pageKeywords = metadata.keywords %}
+{% endif%}
+
+
+  <title>{{ pageTitle }}</title>
+
+  <meta name="description" content="{{ pageDescription }}">
+  <meta name="author" content="{{ metadata.author.name }}"/>
+  <meta name="keywords" content="{% for word in  pageKeywords %}{%if loop.last%}{{ word }}{% else %}{{ word }}, {%endif%}{% endfor %}"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="{{ pageTitle }}"/>
+  <meta property="og:description" content="{{ pageDescription }}"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:creator" content="{{ metadata.social.twitter }}"/>
+  <meta name="twitter:title" content="{{ pageTitle }}"/>
+  <meta name="twitter:description" content="{{ pageDescription }}"/>

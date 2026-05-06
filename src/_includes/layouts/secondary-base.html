@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+    <header>
+        {% include "components/landmarks/nav.html" %}
+        <div class="wrapper-lg hero-band">  
+            <h1>{{ title }}
+            {% if tag%}
+                {{ tag | capitalize }}
+            {%endif%}
+            </h1>
+        </div>
+    </header>
+
+        {% block mainContent %}{% endblock %}
+
+    {% endblock %}
