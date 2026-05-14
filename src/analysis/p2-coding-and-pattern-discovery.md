@@ -1,5 +1,6 @@
 ---
 title: Phase 2 - Coding and Pattern Disovery
+displayOrder: 2
 tags: [ "Analysis"]
 date: 2026-05-05
 description: Begin codifying your data to identify patterns across participants. Use AI for initial coding and for ideating possible code clusters.

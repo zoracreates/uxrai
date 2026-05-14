@@ -1,27 +1,28 @@
 {% extends "layouts/base.html" %}
 {% set title = "Home" %}
-{% set pageId = "analysis" %}
+{% set pageId = "home" %}
 
 {% block content %}
 
   <header>
     {% include "components/landmarks/nav.html" %}
-    <div class="wrapper-md">
-      <h1 class="sr-only">UXR AI Experiments</h1>
-      <p>Capturing thoughts how to use AI for the research process</p>
-    </div>
+
+    {%include "components/home/banner.html"%}
+
   </header>
 
   <main>
-    <div class="wrapper-md">
+    <div class="wrapper-lg">
       <h2>
       Recent Thoughts
       </h2>
       
 
-      <p>
-        <a href="{{ '/analysis' | url }}">hello</a>
-      </p>
+    
+      <h3><a href="{{ '/analysis' | url }}">AI for Qualitative Analysis</a></h3>
+    
+      {%include "components/home/analysis-list-home.html"%}
+       
 
   
     </div>
