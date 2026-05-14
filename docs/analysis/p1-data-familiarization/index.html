@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
     <!-- BUILD FALL BACKS -->
     <link rel="stylesheet" href="./css/style.css"/>
+      <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../../css/style.css"/>
 </head>
 
@@ -45,11 +46,21 @@
 
     <div class="nav-wrapper">
         
+
+
+
+        
+    
+
+
+
     <nav class="wrapper-lg">
         <div>
-        <a class="logo" href="/">UXR AI Experiments</a>
+        <a class="logo" href="../../index.html ">UXR AI</a>
         </div>
     </nav>
+
+
 
     </div>
 
@@ -60,8 +71,14 @@
     <nav aria-label="breadcrumbs">
         <ol class="nav-list">
             <li>
-                <a href="/">
+                <a href="../../index.html">
+                
                     Home
+                </a>
+            </li>
+            <li>
+                <a href="../../analysis/index.html">
+                  Analysis
                 </a>
             </li>
         </ol>
@@ -72,8 +89,8 @@
 
         <p class="u-small">
             <span class="label">Last Updated:</span>
-            <time datetime="Mon May 04 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
-                May 5, 2026</time>
+            <time datetime="Tue May 12 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
+                May 13, 2026</time>
         </p>
 
         </div>
@@ -96,7 +113,8 @@
 3. Summarize desk research.</li>
 <li>Revise transcripts and summaries</li>
 <li>Use AI to generate a list of data limitations.</li>
-<li>Revise the list of limitations.</li>
+<li>If you have notes from sessions, you can also use AI to compare your notes with generated summaries.</li>
+<li>Revise all AI outputs.</li>
 </ol>
 <h2>Examples of tools:</h2>
 <h3>Dovetail</h3>
@@ -158,6 +176,19 @@ List:
 
 - How well are each of these research questions answered?
 	- {questions}
+</code></pre>
+<h3 id="notes-comparison">Notes comparison</h3>
+<p>If you have notes from your sessions, you can use this prompt to compare them. I like to take notes on a spreadsheet, whith one column for observations and one column for each participant. On the participant columns I add a &quot;1&quot; for each observation made and a &quot;0&quot; for no measure. I typically indicate the meaning of the &quot;0&quot; and &quot;1&quot; within the spreadsheet.</p>
+<pre><code>This spreadsheet captures researcher notes for the same intrviews discussed above.
+
+List:
+- Where do notes contradict summaries?
+- Where do notes agree with the summaries?
+- What, if any, new information do these notes provide?
+
+Rules:
+Do NOT consider external knowledge
+Label uncertainty clearly.
 </code></pre>
 
         </article>
