@@ -1,88 +1,30 @@
 {% extends "layouts/base.html" %}
 {% set title = "Home" %}
-{% set pageId = "analysis" %}
+{% set pageId = "home" %}
 
 {% block content %}
 
   <header>
     {% include "components/landmarks/nav.html" %}
-    <div class="wrapper-md">
-      <h1>AI for Qualitative Analysis</h1>
-    </div>
+
+    {%include "components/home/banner.html"%}
+
   </header>
 
   <main>
-    <div class="wrapper-md">
-      <p>
-        The goal of this page is to inspire you to use AI in your analysis process in ways that consider your strengths as a researcher. This framework will hopefully also challenge the notion that AI cannot form part of a rigorous research approach.
-      </p>
+    <div class="wrapper-lg">
+      <h2>
+      Recent Thoughts
+      </h2>
+      
 
-      <p>
-        This isn’t a step-by-step or a how-to in the traditional sense. This is what has worked for me, and also what I’m experimenting with.
-      </p>
+    
+      <h3><a href="{{ './analysis/index.html' | url }}">AI for Qualitative Analysis</a></h3>
+    
+      {%include "components/home/analysis-list-home.html"%}
+       
 
-      <div class="col">
-        <div class="cols-1fr-1fr">
-
-          <div class="col">
-
-            <h2>Researcher's strenghts</h2>
-            <ul>
-              <li>Prioritizing based on relevance. </li>
-              <li>Understanding user needs and emotions. </li>
-              <li>Understanding business impact. </li>
-              <li>Awareness of biases at a human level.</li>
-              <li>Focused coding of data.</li>
-            </ul>
-
-
-          </div>
-
-          <div class="col">
-
-            <h2>How AI can assist</h2>
-
-              <ul>
-                <li>Speed up data-familiarization. </li>
-                <li>Identify potential gaps the evidence used. </li>
-                <li>Help anticipate stakeholder questions. </li>
-                <li>Provide alternatives for looking at data.</li>
-            </ul>
-
-          </div>
-
-        </div>
-      </div>
-
-      <h2> Explore the Process</h2>
-      <p class="note">
-        <span class="label note">Note:</span>
-        “Phases” help me categorize the information. Every researcher has their own process, and UXR isn’t linear. Take what works for you and leave the rest.
-      </p>
-
-      <ul class="post-list cols-1fr-1fr ">
-        <li class="card col">
-          <a href="{{ './analysis/p1-data-familiarization/index.html' | url }}">
-            Phase 1: Data Familiarization
-          </a>
-        </li>
-        <li class="card col">
-          <a href="{{ './analysis/p2-coding-and-pattern-discovery/index.html' | url }}">
-            Phase 2: Coding and pattern generation
-          </a>
-        </li>
-        <li class="card col">
-          <a href="{{ './analysis/p3-interpretation-and-themes-generation/index.html' | url }}">
-            Phase 3. Interpretation and Themes Definition
-          </a>
-        </li>
-        <li class="card col">
-         <a href="{{ './analysis/p4-insight-synthesis-and-review/index.html' | url }}">
-          Phase 4. Insight Synthesis and Review
-          </a>
-        </li>
-      </ul>
-
+  
     </div>
   </main>
 

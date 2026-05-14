@@ -1,7 +1,8 @@
 ---
 title: Phase 1 - Data Familiarization
+displayOrder: 1
 tags: [ "Analysis"]
-date: 2026-05-05
+date: 2026-05-13
 description: Familiarize yourself with the data and ground the AI tool on your research documents. AI to summarize existing research and assess what is represented and what is not in the data.
 ---
 ## Overview
@@ -15,7 +16,9 @@ description: Familiarize yourself with the data and ground the AI tool on your r
     3. Summarize desk research.
 3. Revise transcripts and summaries
 4. Use AI to generate a list of data limitations.
-5. Revise the list of limitations.
+5. If you have notes from sessions, you can also use AI to compare your notes with generated summaries.
+6. Revise all AI outputs.
+
 
 ## Examples of tools:
 ### Dovetail
@@ -82,4 +85,21 @@ List:
 
 - How well are each of these research questions answered?
 	- {questions}
+```
+
+<h3 id="notes-comparison">Notes comparison</h3>
+
+If you have notes from your sessions, you can use this prompt to compare them. I like to take notes on a spreadsheet, whith one column for observations and one column for each participant. On the participant columns I add a "1" for each observation made and a "0" for no measure. I typically indicate the meaning of the "0" and "1" within the spreadsheet.
+
+```
+This spreadsheet captures researcher notes for the same intrviews discussed above.
+
+List:
+- Where do notes contradict summaries?
+- Where do notes agree with the summaries?
+- What, if any, new information do these notes provide?
+
+Rules:
+Do NOT consider external knowledge
+Label uncertainty clearly.
 ```

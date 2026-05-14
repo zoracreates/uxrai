@@ -1,12 +1,12 @@
 {% extends "layouts/base.html"%}
 {% set pageId = "post" %}
-{% set postCollection = collections.analysis | reverse %}
+{% set postCollection = collections.analysis %}
 {% set previousPost = postCollection | getPreviousCollectionItem(page) %}
 {% set nextPost = postCollection | getNextCollectionItem(page) %}
 
 {% block content %}
 
-    {% include "components/posts/analysis-header.html" %}
+    {% include "components/analysis/analysis-header.html" %}
 
     <main>
         <article>

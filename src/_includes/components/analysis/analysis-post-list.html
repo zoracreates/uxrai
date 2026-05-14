@@ -1,0 +1,16 @@
+<ul class="post-list cols-1fr-1fr ">
+    {# get the most recent post in the blog collection #}
+    {% for i in range(0, 6) %}
+
+        {% set post = collections.analysis[i] %}
+        {% if post %}
+        {% set postUrl = "../" + post.url + "index.html" %}
+            <li class="card col">
+                <a href="{{ postUrl | url }}">
+                    {{post.data.title}}
+                </a>
+            </li>
+        {% endif %}
+
+    {% endfor %}
+</ul>

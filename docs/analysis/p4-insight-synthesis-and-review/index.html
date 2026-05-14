@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
     <!-- BUILD FALL BACKS -->
     <link rel="stylesheet" href="./css/style.css"/>
+      <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../../css/style.css"/>
 </head>
 
@@ -45,11 +46,21 @@
 
     <div class="nav-wrapper">
         
+
+
+
+        
+    
+
+
+
     <nav class="wrapper-lg">
         <div>
-        <a class="logo" href="/">UXR AI Experiments</a>
+        <a class="logo" href="../../index.html ">UXR AI</a>
         </div>
     </nav>
+
+
 
     </div>
 
@@ -60,8 +71,14 @@
     <nav aria-label="breadcrumbs">
         <ol class="nav-list">
             <li>
-                <a href="/">
+                <a href="../../index.html">
+                
                     Home
+                </a>
+            </li>
+            <li>
+                <a href="../../analysis/index.html">
+                  Analysis
                 </a>
             </li>
         </ol>
@@ -72,8 +89,8 @@
 
         <p class="u-small">
             <span class="label">Last Updated:</span>
-            <time datetime="Mon May 04 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
-                May 5, 2026</time>
+            <time datetime="Tue May 12 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
+                May 13, 2026</time>
         </p>
 
         </div>
@@ -99,6 +116,7 @@
 </li>
 <li>Start a new AI chat, and provide evidence first as context. You may, for example, provide your revised summaries and/or themes.</li>
 <li>In the same chat, ask AI to identify the strengths and weaknesses of your insights.</li>
+<li>You can also request AI to list quotes related to your insights.</li>
 </ol>
 <h2>Examples of tools:</h2>
 <h3>Word** or PowerPoint</h3>
@@ -111,7 +129,7 @@
 </ul>
 <h2>Suggested prompts:</h2>
 <h3>Provide evidence</h3>
-<p>If you’re opting for something like Copilot, you can use the <a href="../p1-data-familiarization#boundry-check">boundary check</a> prompt from Phase 1 to give your new chat the necessary context.</p>
+<p>If you’re opting for something like Copilot, you can use the <a href="../../analysis/p1-data-familiarization/index.html#boundry-check">boundary check</a> prompt from Phase 1 to give your new chat the necessary context.</p>
 <h3 id="insights-critique"> Insights critique</h3>
 <p>Once your tool has the evidence it needs to consider, you can use it to help you evaluate the strength of your insights.</p>
 <pre><code>Critique the insights in the attached document.
@@ -122,6 +140,19 @@ For each:
  - Is it an insight or just a behavior description?
 
 Suggest revisions where needed. 
+Your only evidence should be the documents submitted at the start of this chat.
+Do NOT use external knowledge. 
+</code></pre>
+<h3 id="evidence-tracing">Evidence Tracing</h3>
+<p>If you need to pull evidence for each of your insights, you can use the following prompt.</p>
+<pre><code>For each insight on the attached document, provide:
+- A list of quotes that supports the insight
+- A list of observations that support the insights
+
+Rules:
+Label each quote clearly by participant (i.e., if a quote comes from P1, say so. )
+Use the quotes verbatim. Do NOT alter the quotes.
+If the provided documents do not contain related quotes specify &quot;No quotes found&quot;
 Your only evidence should be the documents submitted at the start of this chat.
 Do NOT use external knowledge. 
 </code></pre>

@@ -1,7 +1,8 @@
 ---
 title: Phase 4 - Insight Synthesis and Review
+displayOrder: 4
 tags: [ "Analysis"]
-date: 2026-05-05
+date: 2026-05-13
 description: Articulate findings or insights and determine if they require additional clarification. Use AI to identify gaps in thinking.
 ---
 
@@ -16,6 +17,7 @@ description: Articulate findings or insights and determine if they require addit
     - Now what? → Provide a recommendation or potential solution if the insight warrants one.
 2. Start a new AI chat, and provide evidence first as context. You may, for example, provide your revised summaries and/or themes.
 3. In the same chat, ask AI to identify the strengths and weaknesses of your insights.
+4. You can also request AI to list quotes related to your insights.
 
 ## Examples of tools:
 ### Word** or PowerPoint
@@ -28,7 +30,7 @@ You can use either one or both to critique your insights.
 ## Suggested prompts:
 
 ### Provide evidence
-If you’re opting for something like Copilot, you can use the <a href="../p1-data-familiarization#boundry-check">boundary check</a> prompt from Phase 1 to give your new chat the necessary context.
+If you’re opting for something like Copilot, you can use the [boundary check](../../analysis/p1-data-familiarization/index.html#boundry-check) prompt from Phase 1 to give your new chat the necessary context.
 
 <h3 id="insights-critique"> Insights critique</h3>
 
@@ -42,6 +44,22 @@ For each:
  - Is it an insight or just a behavior description?
 
 Suggest revisions where needed. 
+Your only evidence should be the documents submitted at the start of this chat.
+Do NOT use external knowledge. 
+```
+
+<h3 id="evidence-tracing">Evidence Tracing</h3>
+
+If you need to pull evidence for each of your insights, you can use the following prompt.
+```
+For each insight on the attached document, provide:
+- A list of quotes that supports the insight
+- A list of observations that support the insights
+
+Rules:
+Label each quote clearly by participant (i.e., if a quote comes from P1, say so. )
+Use the quotes verbatim. Do NOT alter the quotes.
+If the provided documents do not contain related quotes specify "No quotes found"
 Your only evidence should be the documents submitted at the start of this chat.
 Do NOT use external knowledge. 
 ```

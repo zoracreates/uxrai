@@ -1,3 +1,4 @@
+const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
 module.exports = async function (eleventyConfig) {
@@ -98,9 +99,9 @@ module.exports = function (eleventyConfig) {
     //collections
 
 
-        // Returns a collection of analysis posts in reverse date order
+    // Returns a collection of analysis posts in reverse date order
     eleventyConfig.addCollection('analysis', collection => {
-        return [...collection.getFilteredByGlob('./src/analysis/*.md')].reverse();
+         return sortByDisplayOrder(collection.getFilteredByGlob('./src/analysis/*.md'));
     });
 
     return {
