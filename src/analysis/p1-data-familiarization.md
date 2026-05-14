@@ -1,5 +1,6 @@
 ---
 title: Phase 1 - Data Familiarization
+displayOrder: 1
 tags: [ "Analysis"]
 date: 2026-05-13
 description: Familiarize yourself with the data and ground the AI tool on your research documents. AI to summarize existing research and assess what is represented and what is not in the data.

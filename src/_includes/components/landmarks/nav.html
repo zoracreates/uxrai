@@ -1,6 +1,21 @@
 
+
+{% if pageId == "home" %}
+   {% set logoUrl = "./index.html" %} 
+
+   {% elseif pageId == "post" %}
+
+        {% set logoUrl = "../../index.html "%}
+    {%else%}
+    {% set logoUrl = "../index.html "%}
+{%endif%}
+
+
+
     <nav class="wrapper-lg">
         <div>
-        <a class="logo" href="{{ '/' | url }}">UXR AI</a>
+        <a class="logo" href="{{ logoUrl | url }}">UXR AI</a>
         </div>
     </nav>
+
+

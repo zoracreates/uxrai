@@ -4,7 +4,7 @@
 
         {% set post = collections.analysis[i] %}
         {% if post %}
-        {% set postUrl = post.url + "index.html" %}
+        {% set postUrl = "../" + post.url + "index.html" %}
             <li class="card col">
                 <a href="{{ postUrl | url }}">
                     {{post.data.title}}

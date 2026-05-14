@@ -30,7 +30,7 @@ You can use either one or both to critique your insights.
 ## Suggested prompts:
 
 ### Provide evidence
-If you’re opting for something like Copilot, you can use the <a href="../p1-data-familiarization#boundry-check">boundary check</a> prompt from Phase 1 to give your new chat the necessary context.
+If you’re opting for something like Copilot, you can use the [boundary check](../../analysis/p1-data-familiarization/index.html#boundry-check) prompt from Phase 1 to give your new chat the necessary context.
 
 <h3 id="insights-critique"> Insights critique</h3>
 
