@@ -2,8 +2,9 @@
     <nav aria-label="Previos and Next Posts">
         <div class="wrapper-lg post-nav">
             {% if previousPost %}
+            {% set previousUrl = "../../" + previousPost.url + "index.html" %}
                 <div class="post-nav-title">
-                    <a href="{{ previousPost.url }}">
+                    <a href="{{ previousUrl }}">
                         <span class="post-nav-label">Previous</span>
                         <span class="post-nav-title">
                             <span class="back-arrow">&#8592;</span>
@@ -13,8 +14,10 @@
                 </div>
             {% endif %}
             {% if nextPost %}
+            {% set nextUrl = "../../" + nextPost.url + "index.html" %}
+
                 <div class="block-right post-nav-title">
-                    <a href="{{ nextPost.url }}">
+                    <a href="{{ nextUrl | url }}">
                         <span class="post-nav-label">Next</span>
                         <span class="post-nav-title">
                             {{ nextPost.data.title }}
