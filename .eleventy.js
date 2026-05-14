@@ -1,5 +1,11 @@
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
+module.exports = async function (eleventyConfig) {
+	const { HtmlBasePlugin } = await import("@11ty/eleventy");
+
+	eleventyConfig.addPlugin(HtmlBasePlugin);
+}
+
 // Responsive images
 const Image = require('@11ty/eleventy-img');
 const path = require("path");
@@ -52,6 +58,7 @@ async function imageShortcode(src, alt, cryear = false, caption = false, sizes =
 
 module.exports = function (eleventyConfig) {
 
+
     eleventyConfig.addWatchTarget('./src/sass/');
    
    
@@ -60,7 +67,6 @@ module.exports = function (eleventyConfig) {
 
     // // Set directories to pass through to the dist folder
     eleventyConfig.addPassthroughCopy('./src/images/social/');
-    eleventyConfig.addPassthroughCopy('./src/images/work/tools');
     eleventyConfig.addPassthroughCopy('./src/static/icons/');
     eleventyConfig.addPassthroughCopy('./src/images/background');
     eleventyConfig.addPassthroughCopy('./src/manifest.json');
