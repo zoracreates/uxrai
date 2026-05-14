@@ -98,9 +98,9 @@ module.exports = function (eleventyConfig) {
     //collections
 
 
-        // Returns a collection of analysis posts in reverse date order
+    // Returns a collection of analysis posts in reverse date order
     eleventyConfig.addCollection('analysis', collection => {
-        return [...collection.getFilteredByGlob('./src/analysis/*.md')].reverse();
+        return [...collection.getFilteredByGlob('./src/analysis/*.md')];
     });
 
     return {
