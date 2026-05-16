@@ -1,12 +1,6 @@
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
-// module.exports = async function (eleventyConfig) {
-// 	const { HtmlBasePlugin } = await import("@11ty/eleventy");
-
-// 	eleventyConfig.addPlugin(HtmlBasePlugin);
-// }
-
+const { HtmlBasePlugin } = require("@11ty/eleventy");
 
 /*** 
 RESPONSIVE IMAGES
@@ -79,8 +73,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
    
    
-    // Plugins
-    eleventyConfig.addPlugin(rssPlugin);
+    /* PLUGINS */
+    // HTML Base Plugin helps normalize links to host site on GH Pages
+    eleventyConfig.addPlugin(HtmlBasePlugin);
 
     /* 
     PASS THROUGH
