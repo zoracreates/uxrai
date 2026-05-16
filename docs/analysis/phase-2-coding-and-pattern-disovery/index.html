@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  <title>Phase 2 - Coding and Pattern Disovery</title>
+
+  <meta name="description" content="Begin codifying your data to identify patterns across participants. Use AI for initial coding and for ideating possible code clusters.">
+  <meta name="author" content="Zoraida Cabrera-Mieles"/>
+  <meta name="keywords" content="Analysis"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Phase 2 - Coding and Pattern Disovery"/>
+  <meta property="og:description" content="Begin codifying your data to identify patterns across participants. Use AI for initial coding and for ideating possible code clusters."/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <!-- BUILD FALL BACKS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+      <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+
+    
+        <body id="post">
+    
+
+        
+
+    <header>
+
+    <div class="nav-wrapper">
+        
+
+
+
+        
+    
+
+
+
+    <nav class="wrapper-lg">
+        <div>
+        <a class="logo" href="../../index.html ">UXR AI</a>
+        </div>
+    </nav>
+
+
+
+    </div>
+
+    <div class="wrapper-sm block-center">
+
+    <div class="breadcrumb-wrapper">
+
+    <nav aria-label="breadcrumbs">
+        <ol class="nav-list">
+            <li>
+                <a href="../../index.html">
+                
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="../../analysis/index.html">
+                  Analysis
+                </a>
+            </li>
+        </ol>
+    </nav>
+</div>
+
+        <h1>Phase 2 - Coding and Pattern Disovery</h1>
+
+        <p class="u-small">
+            <span class="label">Last Updated:</span>
+            <time datetime="Mon May 04 2026 20:00:00 GMT-0400 (Eastern Daylight Time)">
+                May 5, 2026</time>
+        </p>
+
+        </div>
+
+</header>
+
+    <main>
+        <article>
+
+            <h2>Overview</h2>
+<ul>
+<li><strong>Objective:</strong> Begin codifying your data to identify patterns across participants.</li>
+<li><strong>AI usage:</strong> Use AI for initial coding and for ideating possible code clusters.</li>
+</ul>
+<h2>Suggested Workflow</h2>
+<ol>
+<li>Ask AI to suggest significant quotes from participants.</li>
+<li>If you used the <a href="../../analysis/phase-1-data-familiarization/index.html#summarization">summarization</a> prompt, start by reviewing the quotes the AI provided as evidence in the summaries. These will likely be related to your research questions.
+<ul>
+<li>Some tools may have additional features for identifying areas of interest within a session. For example, Dovetail can suggest highlights.</li>
+</ul>
+</li>
+<li>Code or label each quote that you plan to use.
+<ul>
+<li>Use manual labeling where possible. AI-generated codes can be hit-or-miss, especially where sentiment is involved.</li>
+</ul>
+</li>
+<li>Group related quotes and modify codes as patterns emerge.
+<ul>
+<li>Generate your own data clusters first.</li>
+<li>As a secondary step, consider feeding the AI your unclustered or semi-clustered data. Ask it to create its own clusters. This exercise might help you see the data in alternative ways.</li>
+</ul>
+</li>
+</ol>
+<h2>Examples of tools:</h2>
+<ul>
+<li><strong>Dovetail</strong> has features specifically for highlighting and clustering.</li>
+<li><strong>Copilot</strong> can help with clustering, but using strict prompting is recommended to avoid additional interpretational biases at this step.</li>
+</ul>
+<h2>Suggested prompts</h2>
+<h3 id="suggest-clusters"> Suggest clusters</h3>
+<p>If you need to use a non-research-specific tool (e.g., Claude, ChatGPT, or Copilot) for clustering, you can provide the tool with a CSV file of transcript excerpts, labeled by participant ID and your initial codes.</p>
+<pre><code>Consider only the uploaded document. Do NOT use external knowledge.
+
+Cluster related quotes together. Consider the quote and its assigned code as part of your clustering efforts.
+
+For each cluster, provide:
+ - A title
+ - A list of related quotes
+ 
+Rules:
+Label each quote clearly by participant (i.e., if a quote comes from P1, say so. )
+Use the quotes verbatim. Do NOT alter the quotes.
+Do NOT explain your thinking.
+Do NOT interpret causes or implications.
+Do NOT propose solutions.
+</code></pre>
+
+        </article>
+    </main>
+
+    
+    <nav aria-label="Previos and Next Posts">
+        <div class="wrapper-lg post-nav">
+            
+            
+                <div class="post-nav-title">
+                    <a href="../../analysis/phase-1-data-familiarization/index.html">
+                        <span class="post-nav-label">Previous</span>
+                        <span class="post-nav-title">
+                            <span class="back-arrow">&#8592;</span>
+                            Phase 1 - Data Familiarization
+                        </span>
+                    </a>
+                </div>
+            
+            
+            
+
+                <div class="block-right post-nav-title">
+                    <a href="../../analysis/phase-3-interpretation-and-themes-generation/index.html">
+                        <span class="post-nav-label">Next</span>
+                        <span class="post-nav-title">
+                            Phase 3 - Interpretation and Themes Generation
+                            <span class="forward-arrow">&#8594;</span>
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    </nav>
+
+
+    <script>
+
+        const preventRightClick = (element) => {
+            element.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+            });
+        }
+        const articleImages = document.querySelectorAll("article img");
+        articleImages.forEach(image => preventRightClick(image))
+    </script>
+
+    
+
+        <footer>
+    <div class="wrapper-lg">
+        <p class="u-small">© Zoraida Cabrera-Mieles 2026</p>
+    </div>
+</footer>
+
+    </body>
+
+</html>
