@@ -4,6 +4,7 @@ displayOrder: 3
 tags: [ "Analysis"]
 date: 2026-05-05
 description: Assign meaning to your quote clusters by defining exactly what each contains—in other words, create themes. Assign meaning to your quote clusters by defining exactly what each contains—in other words, create themes.
+permalink: "analysis/{{ title | slugify }}/"
 ---
 ## Overview
 - **Objective:** Assign meaning to your quote clusters by defining exactly what each contains—in other words, create themes.

@@ -4,6 +4,7 @@ displayOrder: 4
 tags: [ "Analysis"]
 date: 2026-05-13
 description: Articulate findings or insights and determine if they require additional clarification. Use AI to identify gaps in thinking.
+permalink: "analysis/{{ title | slugify }}/"
 ---
 
 ## Overview
@@ -30,7 +31,7 @@ You can use either one or both to critique your insights.
 ## Suggested prompts:
 
 ### Provide evidence
-If you’re opting for something like Copilot, you can use the [boundary check](../../analysis/p1-data-familiarization/index.html#boundry-check) prompt from Phase 1 to give your new chat the necessary context.
+If you’re opting for something like Copilot, you can use the [boundary check](../../analysis/phase-1-data-familiarization/index.html#boundry-check) prompt from Phase 1 to give your new chat the necessary context.
 
 <h3 id="insights-critique"> Insights critique</h3>
 

@@ -4,6 +4,7 @@ displayOrder: 2
 tags: [ "Analysis"]
 date: 2026-05-05
 description: Begin codifying your data to identify patterns across participants. Use AI for initial coding and for ideating possible code clusters.
+permalink: "analysis/{{ title | slugify }}/"
 ---
 
 ## Overview
@@ -12,7 +13,7 @@ description: Begin codifying your data to identify patterns across participants.
 
 ## Suggested Workflow
 1. Ask AI to suggest significant quotes from participants.
-2. If you used the [summarization](../../analysis/p1-data-familiarization/index.html#summarization) prompt, start by reviewing the quotes the AI provided as evidence in the summaries. These will likely be related to your research questions.
+2. If you used the [summarization](../../analysis/phase-1-data-familiarization/index.html#summarization) prompt, start by reviewing the quotes the AI provided as evidence in the summaries. These will likely be related to your research questions.
     - Some tools may have additional features for identifying areas of interest within a session. For example, Dovetail can suggest highlights.
 3. Code or label each quote that you plan to use.
     - Use manual labeling where possible. AI-generated codes can be hit-or-miss, especially where sentiment is involved.

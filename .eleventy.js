@@ -1,13 +1,23 @@
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
-module.exports = async function (eleventyConfig) {
-	const { HtmlBasePlugin } = await import("@11ty/eleventy");
+const { HtmlBasePlugin } = require("@11ty/eleventy");
 
-	eleventyConfig.addPlugin(HtmlBasePlugin);
-}
+/*** 
+RESPONSIVE IMAGES
 
-// Responsive images
+works with IMAGE SHORTCODE which is configured below
+
+Usage with copyright and caption
+{% image "./src/images/path", "alt", date | getYear, "caption" %}
+
+ Usage with caption but no  copyright
+ {% image "./src/images/path", "alt", """, "caption" %}
+
+Usage with no caption
+ {% image "./src/images/path", "alt" %}
+
+***/
+
 const Image = require('@11ty/eleventy-img');
 const path = require("path");
 
@@ -37,7 +47,7 @@ async function imageShortcode(src, alt, cryear = false, caption = false, sizes =
         decoding: 'async',
     };
 
-    // You bet we throw an error on missing alt in `imageAttributes` (alt='' works okay)
+    // Throw an error on missing alt in `imageAttributes` (alt='' works okay)
     const imageHTML = Image.generateHTML(metadata, imageAttributes);
 
     if (cryear) {
@@ -56,27 +66,36 @@ async function imageShortcode(src, alt, cryear = false, caption = false, sizes =
     
 }
 
-
+/***  ELEVENTY CONFIG ****/
 module.exports = function (eleventyConfig) {
 
-
+    /*WATCH SASS*/
     eleventyConfig.addWatchTarget('./src/sass/');
    
    
-    // Plugins
-    eleventyConfig.addPlugin(rssPlugin);
+    /* PLUGINS */
+    // HTML Base Plugin helps normalize links to host site on GH Pages
+    eleventyConfig.addPlugin(HtmlBasePlugin);
 
-    // // Set directories to pass through to the dist folder
+    /* 
+    PASS THROUGH
+    Set directories to pass through to the dist folder
+    */
     eleventyConfig.addPassthroughCopy('./src/images/social/');
     eleventyConfig.addPassthroughCopy('./src/static/icons/');
     eleventyConfig.addPassthroughCopy('./src/images/background');
     eleventyConfig.addPassthroughCopy('./src/manifest.json');
 
-    //image shortcode
+    /* IMAGE SHORTCODE */
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
 
-    // Universal filters (Adds to Liquid, Nunjucks, and Handlebars)
+    /* 
+    DATE FILTERS
+    Universal filters (Adds to Liquid, Nunjucks, and Handlebars)
+    */
+
+    // formatDate filter - displays date in MONTH DY, YYYY 
     eleventyConfig.addFilter('formatDate', function (date) {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         date = new Date(date)
@@ -89,17 +108,16 @@ module.exports = function (eleventyConfig) {
         return formatedDate
     });
 
-
+    // getYear - displays year YYYY
     eleventyConfig.addFilter('getYear', function (date) {
         date = new Date(date)
         return  date.getFullYear();
     });
 
 
-    //collections
+    /*COLLECTIONS */
 
-
-    // Returns a collection of analysis posts in reverse date order
+    // Returns a collection of Analysis posts in reverse date order
     eleventyConfig.addCollection('analysis', collection => {
          return sortByDisplayOrder(collection.getFilteredByGlob('./src/analysis/*.md'));
     });
