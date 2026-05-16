@@ -4,6 +4,7 @@ displayOrder: 1
 tags: [ "Analysis"]
 date: 2026-05-13
 description: Familiarize yourself with the data and ground the AI tool on your research documents. AI to summarize existing research and assess what is represented and what is not in the data.
+permalink: "analysis/{{ title | slugify }}/"
 ---
 ## Overview
 - **Objective:** Familiarize yourself with the data and ground the AI tool on your research documents.
@@ -89,7 +90,7 @@ List:
 
 <h3 id="notes-comparison">Notes comparison</h3>
 
-If you have notes from your sessions, you can use this prompt to compare them. I like to take notes on a spreadsheet, whith one column for observations and one column for each participant. On the participant columns I add a "1" for each observation made and a "0" for no measure. I typically indicate the meaning of the "0" and "1" within the spreadsheet.
+If you have notes from your sessions, you can use this prompt to compare them. I like to take notes on a spreadsheet, but this should work for other file types as well.
 
 ```
 This spreadsheet captures researcher notes for the same intrviews discussed above.
