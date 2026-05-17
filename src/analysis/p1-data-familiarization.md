@@ -13,8 +13,8 @@ permalink: "analysis/{{ title | slugify }}/"
 ## Suggested Workflow:
 1. Inventory data by using AI to:
 2. Transcribe interviews.
-    2. Summarize each interview session.
-    3. Summarize desk research.
+    - Summarize each interview session.
+    - Summarize desk research.
 3. Revise transcripts and summaries
 4. Use AI to generate a list of data limitations.
 5. If you have notes from sessions, you can also use AI to compare your notes with generated summaries.
